@@ -27,16 +27,8 @@ public class Option_1 {
     }
     @Step("Вводим телефон")
     public Option_1 send_data_to_phone(String data){
-//        $(byName("phone")).click();
-//        $(byName("phone")).val("+7 (000) 000-00-00");
-
-        SelenideElement input = $(byName("phone"));
-
-        JavascriptExecutor executor = (JavascriptExecutor) getWebDriver();
-        executor.executeScript("arguments[0].value='data';", input);
-
-//        $(byName("phone")).click();
-//        $(byName("phone")).setValue("+7 (353) 253-25-12");
+        $(byName("phone")).click();
+        $(byName("phone")).sendKeys(data);
         return this;
     }
     @Step("Проверяем правильность введённых данных в поле Телефон")
@@ -57,13 +49,18 @@ public class Option_1 {
     }
     @Step("Вводим галочку")
     public Option_1 checkbox(){
-        $(byXpath("//div[@id=\'wrapper\']/div[3]/div[2]/div/div/div/div/div/div/form/div[6]/label/span")).shouldBe(enabled).click();
+        $(".style_checkmark___GZe2").shouldBe(enabled).click();
         return this;
     }
     @Step("Отправляем данные")
     public Option_1 send_feedback(){
         $(".style_btnBlue__elfaw").shouldBe(enabled).click();
-        sleep(5000);
+        return this;
+    }
+
+    @Step("Проверяем отпраку данных")
+    public Option_1 check_feedback_success(){
+        $(".style_title__OJJny").shouldBe(enabled);
         return this;
     }
 

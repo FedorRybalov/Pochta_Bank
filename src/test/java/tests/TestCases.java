@@ -14,7 +14,7 @@ public class TestCases extends BaseSelenideClass {
 
         Params data = new Params();
         data.fio = "Test";
-        data.phone = "+7 (000) 000-00-00";
+        data.phone = "1111111111";
         data.email = "test@mail.com";
 
         tst.MainPage();
@@ -23,10 +23,11 @@ public class TestCases extends BaseSelenideClass {
                 .send_data_to_phone(data.phone)
                 .send_data_to_email(data.email)
                 .fio_check(data.fio)
-                .phone_check(data.phone)
+                .phone_check("+7 (111) 111-11-11")
                 .email_check(data.email)
                 .checkbox()
-                .send_feedback();
+                .send_feedback()
+                .check_feedback_success();
     }
 
     @Test
