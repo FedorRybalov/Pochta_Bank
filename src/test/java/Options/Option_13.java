@@ -4,8 +4,7 @@ import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.value;
-import static com.codeborne.selenide.Selectors.byName;
-import static com.codeborne.selenide.Selectors.byXpath;
+import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.sleep;
 
@@ -35,12 +34,7 @@ public class Option_13 {
     @Step("Вводим телефон")
     public Option_13 send_data_to_phone(String data){
         $(byName("phone")).click();
-        $(byName("phone")).val(data);
-//        SelenideElement input = $(byName("phone"));
-//        JavascriptExecutor executor = (JavascriptExecutor) getWebDriver();
-//        executor.executeScript("arguments[0].value='+7 (000) 000-00-00';", input);
-//        $(byName("phone")).click();
-//        $(byName("phone")).setValue("+7 (353) 253-25-12");
+        $(byName("phone")).sendKeys(data);
         return this;
     }
     @Step("Проверяем правильность введённых данных в поле Телефон")
@@ -67,7 +61,14 @@ public class Option_13 {
     @Step("Отправляем данные")
     public Option_13 send_feedback(){
         $(".style_btnBlue__elfaw").shouldBe(enabled).click();
-        sleep(5000);
+//        sleep(5000);
         return this;
     }
+
+    @Step("Проверяем отпраку данных")
+    public Option_13 check_feedback_success(){
+        $(".style_title__OJJny").shouldBe(enabled);
+        return this;
+    }
+
 }
