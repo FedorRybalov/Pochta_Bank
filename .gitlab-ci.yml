@@ -14,4 +14,4 @@ Integration tests with allure:
     - ./mvn allure:report
   artifacts:
     paths:
-      -target/allure-results/*
+      - target/allure-results/*
