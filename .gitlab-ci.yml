@@ -11,4 +11,7 @@ Integration tests with allure:
   stage: test
   script:
     - ./mvn clean test
-    - .mvn
+    - ./mvn allure:report
+  artifacts:
+    paths:
+      -target/allure-results/*
