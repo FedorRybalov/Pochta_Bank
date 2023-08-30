@@ -36,7 +36,7 @@ public class Option_1 {
         $(byName("phone")).shouldHave(value(data));
         return this;
     }
-    @Step("Вводим мэйл")
+    @Step("Вводим мэйлe")
     public Option_1 send_data_to_email(String data){
         $(byXpath("//input[@name='email']")).click();
         $(byXpath("//input[@name='email']")).val(data);
