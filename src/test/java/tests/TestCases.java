@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 
 public class TestCases extends BaseSelenideClass {
     @Test
-    @Description("пробный тест на java")
+    @Description("пробный тестs на java")
     public void TC_5(){
         Session tst = new Session();
 
