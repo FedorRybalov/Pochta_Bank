@@ -1,1 +1,0 @@
-java "-DconfigFile=notifications/config.json" -jar allure-notifications-4.3.0.jar
