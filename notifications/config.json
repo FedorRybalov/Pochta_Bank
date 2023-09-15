@@ -1,0 +1,54 @@
+{
+  "base": {
+    "logo": "",
+    "project": "some project",
+    "environment": "some env",
+    "comment": "some comment",
+    "reportLink": "",
+    "language": "en",
+    "allureFolder": "C:/Users/fedor/IdeaProjects/Pochta_Bank/target/site/allure-maven-plugin",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "",
+    "chat": "",
+    "replyTo": ""
+  },
+  "slack": {
+    "token": "",
+    "chat": "",
+    "replyTo": ""
+  },
+  "mattermost": {
+    "url": "",
+    "token": "",
+    "chat": ""
+  },
+  "skype": {
+    "appId": "",
+    "appSecret": "",
+    "serviceUrl": "",
+    "conversationId": "",
+    "botId": "",
+    "botName": ""
+  },
+  "mail": {
+    "host": "smtp.gmail.com",
+    "port": "465",
+    "username": "rybalovtesting@gmail.com",
+    "password": "igvrbdbhcrzpxaup",
+    "securityProtocol": "SSL",
+    "from": "rybalovtesting@gmail.com",
+    "recipient": "fedorrybalov@gmail.com"
+  },
+  "discord": {
+    "botToken": "",
+    "channelId": ""
+  },
+  "proxy": {
+    "host": "",
+    "port": 0,
+    "username": "",
+    "password": ""
+  }
+}
